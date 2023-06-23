@@ -1,0 +1,80 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: monospace;
+    overflow: hidden;
+    font-family:'Gloria Hallelujah', cursive;
+    background-color: #fff5ee;
+}
+
+/* Common settings */
+#menu-bar {
+    background-color: #fff5ee; /* The background color you want */
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    -webkit-app-region: drag; /* Make the menu bar draggable */
+}
+
+.menu-item {
+    margin: 0 5px;
+    padding: 2px 6px;
+    cursor: pointer;
+    -webkit-app-region: no-drag; /* Make the menu items non-draggable */
+}
+
+.menu-item img {
+    height: 24px;
+    width: 24px;
+}
+
+/* Grouped buttons */
+
+.file-buttons {
+    display: flex;
+}
+
+.control-buttons {
+    display: flex;
+}
+
+
+#editor {
+    width: 100%;
+    height: calc(100% - 125px); /* Reducing the height by the menu bar's height */
+    background-color: #fff5ee; /* The same background color as menu bar */
+    border: none;
+    font-family:'Gloria Hallelujah', cursive;
+    resize: none;
+    padding: 10px
+}
+
+#editor:focus {
+    outline: none;
+}
+
+/* ... window styles ... */
+
+#close-button,#fullscreen-button,#minimize-button {
+    margin-left: 0px;
+    color: red;
+    font-weight: bold;
+    display: flex;
+    flex-grow: 1;
+}
+
+
+/* ... Botton styles... */
+
+
+#status-bar {
+    padding: 10px;
+    text-align: right;
+}
+
+#word-count {
+    margin-right: 10px;
+}

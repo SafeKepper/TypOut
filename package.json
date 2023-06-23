@@ -1,0 +1,44 @@
+{
+  "name": "typout",
+  "productName": "TypOut",
+  "version": "1.0.0",
+  "description": "Simple Notepad app",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "build": "electron-builder"
+  },
+  "build": {
+    "appId": "com.bhuvi.TypOut",
+    "mac": {
+      "category": "public.app-category.utilities"
+    },
+    "win": {
+      "target": "nsis",
+      "icon": "src/img/app-icon.ico"
+    },
+    "linux": {
+      "target": "AppImage",
+      "icon": "src/img/app-icon.ico"
+    },
+    "directories": {
+      "output": "build_output_1.2"
+    },
+    "files": [
+      "index.html",
+      "main.js",
+      "preload.js",
+      "style.css",
+      "renderer.js",
+      "src/**/*"
+    ]
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^25.2.0",
+    "electron-builder": "^24.4.0"
+  }
+}

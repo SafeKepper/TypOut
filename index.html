@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Notepad</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="menu-bar">
+        <div class="file-buttons">
+            <div class="menu-item" onclick="handleMenu('new')">New</div>
+            <div class="menu-item" onclick="handleMenu('open')">Open</div>
+            <div class="menu-item" onclick="handleMenu('save')">Save</div>
+        </div>
+        <div class="control-buttons">
+            <span id="minimize-button" class="menu-item" onclick="handleMenu('minimize')">
+                <img src="src/img/minimize.png" alt="">
+            </span>
+            <span id="fullscreen-button" class="menu-item" onclick="handleMenu('fullscreen')">
+                <img src="src/img/resize.png" alt="">
+            </span>
+            <div id="close-button" class="menu-item" onclick="handleMenu('close')">
+                <img src="src/img//close.png" alt="">
+            </div>
+        </div>
+
+    </div>
+    <input type="file" id="fileInput" style="display:none" onchange="openFile(event)">
+    <textarea id="editor"></textarea>
+    <div id="status-bar">
+        <span id="word-count">Words: 0</span>
+        <span id="typing-speed" class="menu-item">Speed: 0 WPM</span>
+    </div>
+    <script src="renderer.js"></script>
+</body>
+
+</html>
